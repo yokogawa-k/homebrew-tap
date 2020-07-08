@@ -4,9 +4,9 @@ class CfnGuard < Formula
 
   # curl -s https://api.github.com/repos/aws-cloudformation/cloudformation-guard/tags | jq .[0]
   # curl -sL https://github.com/aws-cloudformation/cloudformation-guard/archive/$(curl -s https://api.github.com/repos/aws-cloudformation/cloudformation-guard/tags | jq -r .[0].name).tar.gz | sha256sum
-  VERSION = "v0.5.1-beta"
+  VERSION = "v0.5.2-beta"
   url "https://github.com/aws-cloudformation/cloudformation-guard/archive/#{VERSION}.tar.gz"
-  sha256 "3f3e7cbb589a94431239d6daea0852495f0252f1e82bc376f9efbf1f7e611620"
+  sha256 "05f48b30708c053367d5792b96af64914e149d7094a5b4c92f4d67d998e473b8"
 
   head "https://github.com/aws-cloudformation/cloudformation-guard.git"
 
