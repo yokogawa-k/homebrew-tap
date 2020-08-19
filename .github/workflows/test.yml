@@ -1,0 +1,22 @@
+name: brew tap test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  test-cfn-guard:
+    name: Test cfn-guard formula
+    runs-on: ubuntu-latest
+    container:
+      image: homebrew/brew
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1
+    - name: Setup cfn-guard
+      run: brew install ./cfn-guard.rb
+    - name: Test cfn-guard
+      run: brew test ./cfn-guard.rb
